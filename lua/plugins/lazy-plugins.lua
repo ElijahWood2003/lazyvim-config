@@ -34,12 +34,6 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, { name = "emoji" })
     end,
-
-    cmp.setup({
-      mapping = cmp.mapping.preset.insert({
-        ["<CR>"] = cmp.mapping.confirm({ select = false }),
-      }),
-    }),
   },
 
   {
