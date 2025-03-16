@@ -24,28 +24,20 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
+  { "folke/trouble.nvim", enabled = true },
 
   -- override nvim-cmp and add cmp-emoji
+
   {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
+    --    "hrsh7th/cmp-nvim-lsp",
   },
 
   {
-    "hrsh7th/cmp-nvim-lsp",
+    --    "hrsh7th/cmp-buffer",
   },
 
   {
-    "hrsh7th/cmp-buffer",
-  },
-
-  {
-    "hrsh7th/cmp-path",
+    --   "hrsh7th/cmp-path",
   },
 
   -- change some telescope options and a keymap to browse plugin files
@@ -175,7 +167,7 @@ return {
   },
 
   -- use mini.starter instead of alpha
-  { import = "lazyvim.plugins.extras.ui.mini-starter" },
+  -- { import = "lazyvim.plugins.extras.ui.mini-starter" },
 
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
